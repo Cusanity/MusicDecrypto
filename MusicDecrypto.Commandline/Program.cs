@@ -179,7 +179,7 @@ internal sealed class DecryptoCommand : AsyncCommand<DecryptoCommand.Settings>
             table.AddRow("Online", properties.Item2.Title, properties.Item2.Performers, properties.Item2.Album);
             AnsiConsole.Write(table);
 
-            return AnsiConsole.Confirm(message ?? string.Empty);
+            return true;
         }
         catch
         {
